@@ -89,8 +89,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'cohorts',  
         'USER': 'root',  
-        'PASSWORD': '',  
-        'HOST': 'localhost',  
+        'PASSWORD': 'root',  
+        'HOST': '0.0.0.0',
         'PORT': '3306',  
         'OPTIONS': {  
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
