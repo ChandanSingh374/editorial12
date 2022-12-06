@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cohorts',
     'users',
-    'django_seed',
     'rest_framework'
 ]
 
