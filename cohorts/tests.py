@@ -126,7 +126,7 @@ class GetScoreBoardTests(APITestCase):
         # 2nd Request Expectation
         res_2_body = json.loads(response_2.content)
         self.assertEqual(response_2.status_code, 200)
-        self.assertEqual(len(res_1_body), 1)
+        self.assertEqual(len(res_2_body), 1)
         self.check_cost_expectation(100, 200)
 
     def test_only_allow_30_sec_of_stale_data(self):
@@ -149,7 +149,7 @@ class GetScoreBoardTests(APITestCase):
         self.assertGreaterEqual(len(res_2_body), 1)
 
         # 3rd Request after 30sec
-        # time.sleep(30)
+        time.sleep(30)
         response_3 = self.make_new_request(url)
 
         # 3rd Request Expectation
