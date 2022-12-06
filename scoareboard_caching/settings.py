@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-#1$51hg#!%s@)!*bb23%j6-@2v90*+y9zl$*r6%e^m!b*zdah6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -36,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'batches',
+    'cohorts',
     'users',
     'django_seed',
     'rest_framework'
@@ -86,10 +87,10 @@ WSGI_APPLICATION = 'scoareboard_caching.wsgi.application'
 DATABASES = {  
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'my_database',  
+        'NAME': 'cohorts',  
         'USER': 'root',  
-        'PASSWORD': 'root',
-        'HOST': '0.0.0.0',
+        'PASSWORD': '',  
+        'HOST': 'localhost',  
         'PORT': '3306',  
         'OPTIONS': {  
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
